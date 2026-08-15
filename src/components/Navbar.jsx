@@ -12,6 +12,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
     { id: 'home', label: 'Home' },
     { id: 'registration', label: 'Find Tutor' },
     { id: 'join-tutor', label: 'Join as Tutor' },
+    { id: 'why-choose-us', label: 'Why Choose Us' },
     { id: 'contact', label: 'Contact' },
   ];
 

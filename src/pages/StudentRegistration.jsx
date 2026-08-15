@@ -18,7 +18,7 @@ export default function StudentRegistration({ presetTutor, onSuccess }) {
     tuitionFee: '',
     tuitionMode: '1-on-1 Home Tuition',
     preferredGender: 'Any Gender',
-    preferredDaysTime: 'Evening (5 PM - 7 PM)',
+    preferredDaysTime: '',
     additionalNotes: presetTutor ? `Requesting tutor: ${presetTutor.name} (${presetTutor.subjects?.join(', ')})` : ''
   });
 
@@ -307,7 +307,7 @@ https://wa.me/916304248840`;
               </label>
               <input
                 type="text"
-                placeholder="e.g. Evening 5 PM - 7 PM (Mon to Sat)"
+                placeholder="e.g. Mon to Sat"
                 value={formData.preferredDaysTime}
                 onChange={(e) => setFormData({ ...formData, preferredDaysTime: e.target.value })}
                 className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"

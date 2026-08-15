@@ -579,6 +579,32 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
 
       </form>
 
+      {/* COMMUNITY WHATSAPP GROUP BANNER - BELOW JOIN AS A TUTOR */}
+      <div className="bg-gradient-to-r from-emerald-950 via-emerald-900 to-slate-950 rounded-xl sm:rounded-3xl p-3 sm:p-8 border border-emerald-500/40 text-white shadow-lg sm:shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3 sm:gap-6">
+        <div className="space-y-1.5 sm:space-y-3 max-w-2xl">
+          <span className="bg-amber-400 text-slate-950 font-black text-[9px] sm:text-xs px-2 py-0.5 sm:px-3.5 sm:py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1 sm:gap-1.5 shadow">
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Join Teja Home Tuition Group for Every Update
+          </span>
+          <h3 className="text-sm sm:text-3xl font-black text-white leading-snug">
+            Join Official Teja Home Tuition Community Group
+          </h3>
+          <p className="text-slate-300 text-[11px] sm:text-sm leading-relaxed">
+            Get instant alerts for new home tuition opportunities, student requirements across Hyderabad, location updates, and teacher announcements!
+          </p>
+        </div>
+
+        <a
+          href="https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full md:w-auto bg-[#25D366] hover:bg-[#20ba5a] text-white font-black px-3.5 sm:px-6 py-2 sm:py-4 rounded-lg sm:rounded-2xl shadow-md transition-all text-[11px] sm:text-base flex items-center justify-center gap-1.5 sm:gap-2.5 shrink-0 border border-white/40 hover:scale-105"
+        >
+          <MessageSquare className="w-3.5 h-3.5 sm:w-5 sm:h-5 fill-white text-white" />
+          <span>Join WhatsApp Group</span>
+          <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+        </a>
+      </div>
+
     </div>
   );
 }

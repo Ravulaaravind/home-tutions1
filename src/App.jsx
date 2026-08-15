@@ -8,6 +8,10 @@ import SuccessModal from './components/SuccessModal';
 import Home from './pages/Home';
 import JoinAsTutor from './pages/JoinAsTutor';
 import StudentRegistration from './pages/StudentRegistration';
+import RealTuitionExperience from './components/RealTuitionExperience';
+import WhyChooseUs from './components/WhyChooseUs';
+import HowItWorks from './components/HowItWorks';
+import LocationMap from './components/LocationMap';
 import Contact from './pages/Contact';
 import { PhoneCall, Search } from 'lucide-react';
 
@@ -73,11 +77,21 @@ export default function App() {
           />
         </section>
 
-        {/* SECTION 3: JOIN TEJA HOME TUITIONS NETWORK (TUTOR REGISTRATION) - BELOW */}
+        {/* SECTION 3: REAL TUITION EXPERIENCE SHOWCASE - BELOW PARENT & STUDENT DETAILS */}
+        <section id="real-experience" className="scroll-mt-24 border-t border-slate-200/60 pt-8 pb-4">
+          <RealTuitionExperience />
+        </section>
+
+        {/* SECTION 3: JOIN TEJA HOME TUITIONS NETWORK (TUTOR REGISTRATION) */}
         <section id="join-tutor" className="scroll-mt-24 border-t border-slate-200/60 pt-8 py-12">
           <JoinAsTutor 
             onSuccess={handleFormSuccess}
           />
+        </section>
+
+        {/* SECTION 4: WHY CHOOSE US (WHY PARENTS TRUST TEJA HOME TUITIONS) - BELOW JOIN AS A TUTOR */}
+        <section id="why-choose-us" className="scroll-mt-24 border-t border-slate-200/60 pt-8 pb-4">
+          <WhyChooseUs />
         </section>
 
         {/* SECTION 5: CONTACT US & FAQS */}
@@ -85,6 +99,16 @@ export default function App() {
           <Contact 
             onSuccess={handleFormSuccess}
           />
+        </section>
+
+        {/* SECTION 6: 3 SIMPLE STEPS / HOW IT WORKS - BELOW CONTACT US */}
+        <section id="how-it-works" className="scroll-mt-24 border-t border-slate-200/60 pt-6 pb-8">
+          <HowItWorks setActiveTab={scrollToSection} />
+        </section>
+
+        {/* SECTION 7: LOCATION MAP - HABSIGUDA METRO STATION - BELOW 3 SIMPLE STEPS */}
+        <section id="location" className="scroll-mt-24 border-t border-slate-200/60 pt-6 pb-8">
+          <LocationMap />
         </section>
 
       </main>
