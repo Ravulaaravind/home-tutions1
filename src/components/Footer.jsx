@@ -22,7 +22,7 @@ export default function Footer({ setActiveTab }) {
               <Sparkles className="w-3.5 h-3.5" /> Join Teja Home Tuition Group for Every Update
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Subscribe to Official Tutor WhatsApp Channel
+              Join Official Teja Home Tuition Group
             </h3>
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
               Get instant alerts for new home tuition opportunities, student requirements across Hyderabad, location updates, and teacher announcements!
@@ -30,13 +30,13 @@ export default function Footer({ setActiveTab }) {
           </div>
 
           <a
-            href="https://whatsapp.com/channel/0029VbDY3eJ7DAX4GXRn3v32"
+            href="https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full md:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3.5 rounded-2xl shadow-xl flex items-center justify-center gap-2 group transition-all text-sm shrink-0 border border-emerald-300/40"
           >
             <MessageSquare className="w-5 h-5 fill-slate-950 text-slate-950" />
-            <span>Join WhatsApp Channel</span>
+            <span>Join WhatsApp Group</span>
             <ExternalLink className="w-4 h-4 text-slate-950" />
           </a>
         </div>
@@ -136,7 +136,7 @@ export default function Footer({ setActiveTab }) {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 mt-1 flex-shrink-0" />
-                <span>Suite 302, Cyber Heights, Hitec City Road, Madhapur, Hyderabad, TS - 500081</span>
+                <span>Near Habsiguda Metro Station, Uppal Road, Habsiguda, Hyderabad, TS - 500007</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />

@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { 
-  UserCheck, BookOpen, MapPin, Phone, MessageSquare, Clock, 
-  Sparkles, CheckCircle2, ShieldCheck, User, Calendar
+  UserCheck, GraduationCap, Phone, MapPin, BookOpen, 
+  Calendar, CheckCircle2, Sparkles, Send, MessageSquare, ExternalLink
 } from 'lucide-react';
 import { HYDERABAD_LOCATIONS, CLASSES_LIST, SUBJECTS_LIST, BOARDS_LIST } from '../data/tutorsData';
 
-export default function StudentRegistration({ onSuccess, presetTutor = null }) {
+export default function StudentRegistration({ presetTutor, onSuccess }) {
   const [formData, setFormData] = useState({
     parentName: '',
     studentName: '',
+    phone: '',
+    whatsapp: '',
     studentClass: 'Class 10',
     board: 'CBSE',
     subjectRequired: 'Mathematics',
-    location: 'Gachibowli',
-    preferredGender: 'Any',
-    tuitionMode: 'Home Tuition',
-    preferredDaysTime: 'Mon - Fri (5:00 PM - 7:00 PM)',
-    phone: '',
-    whatsapp: '',
-    additionalNotes: presetTutor ? `Interested in classes with ${presetTutor.name}` : ''
+    location: '',
+    tuitionFee: '',
+    tuitionMode: '1-on-1 Home Tuition',
+    preferredGender: 'Any Gender',
+    preferredDaysTime: 'Evening (5 PM - 7 PM)',
+    additionalNotes: presetTutor ? `Requesting tutor: ${presetTutor.name} (${presetTutor.subjects?.join(', ')})` : ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +29,7 @@ export default function StudentRegistration({ onSuccess, presetTutor = null }) {
     setIsSubmitting(true);
 
     const waText = 
-`📚 *NEW HOME TUTOR REQUEST - TEJA HOME TUITIONS*
+`📚 *NEW STUDENT & PARENT TUITION REGISTRATION - TEJA HOME TUITIONS*
 
 *Parent & Student Details:*
 • Parent Name: ${formData.parentName}
@@ -36,229 +37,313 @@ export default function StudentRegistration({ onSuccess, presetTutor = null }) {
 • Phone: ${formData.phone}
 • WhatsApp: ${formData.whatsapp}
 
-*Tuition Requirement:*
-• Class: ${formData.studentClass}
-• Board: ${formData.board}
+*Tuition Requirements:*
+• Class / Grade: ${formData.studentClass}
+• Board / Syllabus: ${formData.board}
 • Subject Required: ${formData.subjectRequired}
-• Hyderabad Area: 📍 ${formData.location}
+• Hyderabad Locality: 📍 ${formData.location}
+• Tuition Fee Budget: ${formData.tuitionFee ? '₹' + formData.tuitionFee + '/month' : 'Negotiable'}
 • Preferred Mode: ${formData.tuitionMode}
 • Preferred Tutor Gender: ${formData.preferredGender}
-• Timings / Days: ${formData.preferredDaysTime}
+• Timings & Days: ${formData.preferredDaysTime}
 
-*Additional Notes:* ${formData.additionalNotes ? formData.additionalNotes : 'N/A'}`;
+*Additional Notes:* ${formData.additionalNotes ? formData.additionalNotes : 'N/A'}
+
+*📢 Official Teja Home Tuitions WhatsApp Helpline:*
+https://wa.me/916304248840`;
 
     window.open(`https://wa.me/916304248840?text=${encodeURIComponent(waText)}`, '_blank');
+    setIsSubmitting(false);
+
+    // Automatic form refresh / reset to clean state
+    setFormData({
+      parentName: '',
+      studentName: '',
+      phone: '',
+      whatsapp: '',
+      studentClass: 'Class 10',
+      board: 'CBSE',
+      subjectRequired: 'Mathematics',
+      location: '',
+      tuitionMode: '1-on-1 Home Tuition',
+      preferredGender: 'Any Gender',
+      preferredDaysTime: '',
+      additionalNotes: ''
+    });
+
+    if (onSuccess) {
+      onSuccess({
+        title: 'Tuition Registration Sent via WhatsApp!',
+        message: `Thank you ${formData.parentName}! Your request for ${formData.studentName} (${formData.studentClass} ${formData.board}) has been sent to our WhatsApp helpline (+91 6304248840).`
+      });
+    }
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+    <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
       
-      {/* Banner */}
-      <div className="blue-purple-gradient rounded-3xl p-6 sm:p-10 text-white space-y-3 relative overflow-hidden shadow-xl">
-        <span className="bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-          Student & Parent Registration
-        </span>
-        <h1 className="text-3xl sm:text-4xl font-black">Start Direct Tuition Classes</h1>
-        <p className="text-blue-100 text-sm max-w-xl">
-          Tell us your tuition requirement and we'll match you with Hyderabad's top background-verified home tutors in your neighborhood.
+      {/* Top Banner */}
+      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-950 rounded-3xl p-6 sm:p-10 text-white space-y-3 relative overflow-hidden shadow-2xl border border-blue-400/30">
+        <div className="flex items-center gap-2">
+          <span className="bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+            Find Tutor Registration
+          </span>
+          <span className="bg-emerald-500/30 text-emerald-200 text-xs px-3 py-1 rounded-full border border-emerald-400/40">
+            Matched Tutor in 2 Hours
+          </span>
+        </div>
+
+        <h1 className="text-3xl sm:text-4xl font-black">Find a Home & Online Tutor</h1>
+        <p className="text-blue-100 text-sm max-w-2xl">
+          Fill out the registration form below to get background-checked 1-on-1 home or online tutors in Hyderabad tailored to your child's exact subject, class, and location requirements.
         </p>
       </div>
 
-      {/* Form Card */}
-      <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200 space-y-6">
+      {/* Main Registration Form */}
+      <form onSubmit={handleSubmit} className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200 space-y-8">
         
-        {presetTutor && (
-          <div className="bg-indigo-50 border border-indigo-200 p-4 rounded-2xl flex items-center gap-3">
-            <img src={presetTutor.image} alt={presetTutor.name} className="w-12 h-12 rounded-xl object-cover" />
+        {/* Parent & Student Information */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-black text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-2">
+            <UserCheck className="w-6 h-6 text-blue-600" />
+            <span>1. Parent & Student Details</span>
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <span className="text-xs text-indigo-700 font-bold">Selected Tutor for Demo:</span>
-              <h4 className="font-extrabold text-slate-900 text-sm">{presetTutor.name} ({presetTutor.qualification})</h4>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Parent / Guardian Full Name *
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="e.g. Ramesh Reddy"
+                value={formData.parentName}
+                onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Student Full Name *
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="e.g. Ananya Reddy"
+                value={formData.studentName}
+                onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Mobile Number *
+              </label>
+              <input
+                type="tel"
+                required
+                placeholder="10-digit mobile number"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                WhatsApp Number *
+              </label>
+              <input
+                type="tel"
+                required
+                placeholder="WhatsApp number"
+                value={formData.whatsapp}
+                onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
             </div>
           </div>
-        )}
+        </div>
 
-        {/* Section 1: Names */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Parent / Guardian Name *
-            </label>
-            <input
-              type="text"
-              required
-              value={formData.parentName}
-              onChange={(e) => setFormData({...formData, parentName: e.target.value})}
-              placeholder="e.g. Ramesh Reddy"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
+        {/* Academic Requirements */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-black text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-indigo-600" />
+            <span>2. Tuition Academic Requirements</span>
+          </h3>
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Student Name *
-            </label>
-            <input
-              type="text"
-              required
-              value={formData.studentName}
-              onChange={(e) => setFormData({...formData, studentName: e.target.value})}
-              placeholder="e.g. Rohan Reddy"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Student Class / Grade *
+              </label>
+              <select
+                value={formData.studentClass}
+                onChange={(e) => setFormData({ ...formData, studentClass: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              >
+                {CLASSES_LIST.map((c) => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Syllabus / Board *
+              </label>
+              <select
+                value={formData.board}
+                onChange={(e) => setFormData({ ...formData, board: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              >
+                {BOARDS_LIST.map((b) => (
+                  <option key={b} value={b}>{b}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Subject Required *
+              </label>
+              <select
+                value={formData.subjectRequired}
+                onChange={(e) => setFormData({ ...formData, subjectRequired: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              >
+                {SUBJECTS_LIST.map((s) => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+                <option value="All Subjects">All Subjects (Primary/Middle)</option>
+              </select>
+            </div>
           </div>
         </div>
 
-        {/* Section 2: Class, Board & Subject */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Class / Grade *
-            </label>
-            <select
-              value={formData.studentClass}
-              onChange={(e) => setFormData({...formData, studentClass: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              {CLASSES_LIST.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
+        {/* Location & Preferences */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-black text-slate-900 border-b border-slate-200 pb-3 flex items-center gap-2">
+            <MapPin className="w-6 h-6 text-emerald-600" />
+            <span>3. Hyderabad Locality & Preferences</span>
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Hyderabad Locality / Area *
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="Type your area name here..."
+                value={formData.location}
+                onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Preferred Mode *
+              </label>
+              <select
+                value={formData.tuitionMode}
+                onChange={(e) => setFormData({ ...formData, tuitionMode: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              >
+                <option value="1-on-1 Home Tuition">1-on-1 Home Tuition</option>
+                <option value="Online Tuition">Online Tuition</option>
+                <option value="Both Home & Online">Both Home & Online</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Preferred Tutor Gender *
+              </label>
+              <select
+                value={formData.preferredGender}
+                onChange={(e) => setFormData({ ...formData, preferredGender: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              >
+                <option value="Any Gender">Any Gender</option>
+                <option value="Female Tutor Preferred">Female Tutor Preferred</option>
+                <option value="Male Tutor Preferred">Male Tutor Preferred</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Major Hyderabad Service Zones Reference Text Box */}
+          <div className="bg-slate-50/90 rounded-2xl p-4 border border-slate-200 space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+              📍 Major Hyderabad Service Zones (Reference Area List):
+            </span>
+            <p className="text-xs text-slate-600 leading-relaxed font-medium">
+              Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Habsiguda • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Tuition Fee / Monthly Budget (₹)
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your monthly fee budget..."
+                value={formData.tuitionFee}
+                onChange={(e) => setFormData({ ...formData, tuitionFee: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Preferred Timings & Days
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Evening 5 PM - 7 PM (Mon to Sat)"
+                value={formData.preferredDaysTime}
+                onChange={(e) => setFormData({ ...formData, preferredDaysTime: e.target.value })}
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
+              />
+            </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Board *
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+              Additional Notes / Learning Goals
             </label>
-            <select
-              value={formData.board}
-              onChange={(e) => setFormData({...formData, board: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              {BOARDS_LIST.map(b => <option key={b} value={b}>{b}</option>)}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Subject Required *
-            </label>
-            <select
-              value={formData.subjectRequired}
-              onChange={(e) => setFormData({...formData, subjectRequired: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              {SUBJECTS_LIST.map(s => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </div>
-        </div>
-
-        {/* Section 3: Location & Preferences */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Hyderabad Area *
-            </label>
-            <select
-              value={formData.location}
-              onChange={(e) => setFormData({...formData, location: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              {HYDERABAD_LOCATIONS.map(loc => <option key={loc} value={loc}>{loc}</option>)}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Preferred Tutor Gender
-            </label>
-            <select
-              value={formData.preferredGender}
-              onChange={(e) => setFormData({...formData, preferredGender: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              <option value="Any">Any Gender</option>
-              <option value="Male">Male Tutor</option>
-              <option value="Female">Female Tutor</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Tuition Mode
-            </label>
-            <select
-              value={formData.tuitionMode}
-              onChange={(e) => setFormData({...formData, tuitionMode: e.target.value})}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
-            >
-              <option value="Home Tuition">Home Tuition (At Residence)</option>
-              <option value="Online">Online Tuition</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Section 4: Days / Timings & Phone */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Preferred Days & Timings *
-            </label>
-            <input
-              type="text"
-              required
-              value={formData.preferredDaysTime}
-              onChange={(e) => setFormData({...formData, preferredDaysTime: e.target.value})}
-              placeholder="e.g. Mon to Fri Evening 6 PM"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Phone / WhatsApp Number *
-            </label>
-            <input
-              type="tel"
-              required
-              pattern="[0-9]{10}"
-              value={formData.phone}
-              onChange={(e) => setFormData({...formData, phone: e.target.value, whatsapp: e.target.value})}
-              placeholder="10-digit mobile number"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+            <textarea
+              rows="3"
+              placeholder="Specify any specific topics, exam goals (Board Exams, IIT-JEE Foundation), or learning requirements..."
+              value={formData.additionalNotes}
+              onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
+              className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 text-sm font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none"
+            ></textarea>
           </div>
         </div>
 
-        <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Additional Notes / Requirements (Optional)
-          </label>
-          <textarea
-            rows={2}
-            value={formData.additionalNotes}
-            onChange={(e) => setFormData({...formData, additionalNotes: e.target.value})}
-            placeholder="Mention any specific chapters, exam goals, or preferences..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          ></textarea>
-        </div>
-
-        <div className="pt-2 border-t border-slate-100">
+        {/* Submit Button */}
+        <div className="pt-2 flex justify-center">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full amber-gradient-btn text-white py-4 rounded-2xl font-bold text-base shadow-xl flex items-center justify-center gap-2"
+            className="w-auto max-w-xs sm:max-w-md bg-[#25D366] hover:bg-[#20ba5a] text-white font-black py-2.5 sm:py-3.5 px-5 sm:px-8 rounded-xl sm:rounded-2xl shadow-xl flex items-center justify-center gap-2 sm:gap-2.5 text-xs sm:text-base transition-all border border-white/40 hover:scale-[1.02]"
           >
-            {isSubmitting ? (
-              <span>Submitting Requirement...</span>
-            ) : (
-              <>
-                <Sparkles className="w-5 h-5" />
-                <span>Submit & Get Call in 2 Hours</span>
-              </>
-            )}
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-white flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Send via WhatsApp</span>
           </button>
         </div>
 
       </form>
-
     </div>
   );
 }

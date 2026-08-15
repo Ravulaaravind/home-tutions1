@@ -187,9 +187,15 @@ export const TUTORS_DATA = [
 
 export const HYDERABAD_LOCATIONS = [
   "Madhapur", "Gachibowli", "Kondapur", "Jubilee Hills", "Banjara Hills",
-  "Kukatpally", "Miyapur", "Nizampet", "Secunderabad", "LB Nagar",
-  "Dilsukhnagar", "Begumpet", "Himayatnagar", "Mehdipatnam", "Tolichowki",
-  "Uppal", "Habsiguda", "Ameerpet", "Pragathi Nagar", "Hafeezpet"
+  "Kukatpally", "KPHB Colony", "Miyapur", "Nizampet", "Bachupally",
+  "Pragathi Nagar", "Hafeezpet", "Chanda Nagar", "Begumpet", "Ameerpet",
+  "SR Nagar", "Panjagutta", "Himayatnagar", "Narayanguda", "Nallakunta",
+  "Koti", "Abids", "Mehdipatnam", "Tolichowki", "Attapur",
+  "Manikonda", "Puppalguda", "Financial District", "Tellapur", "Kokapet",
+  "Narsingi", "Sun City", "Rajendra Nagar", "LB Nagar", "Dilsukhnagar",
+  "Kothapet", "Nagole", "Hayathnagar", "Uppal", "Habsiguda",
+  "Tarnaka", "Moulali", "ECIL", "Sainikpuri", "AS Rao Nagar",
+  "Malkajgiri", "Secunderabad", "Bowenpally", "Alwal", "Kompally"
 ];
 
 export const CLASSES_LIST = [

@@ -6,7 +6,6 @@ import TutorModal from './components/TutorModal';
 import SuccessModal from './components/SuccessModal';
 
 import Home from './pages/Home';
-import FindTutors from './pages/FindTutors';
 import JoinAsTutor from './pages/JoinAsTutor';
 import StudentRegistration from './pages/StudentRegistration';
 import Contact from './pages/Contact';
@@ -66,23 +65,7 @@ export default function App() {
           />
         </section>
 
-        {/* SECTION 2: FIND TUTORS */}
-        <section id="find-tutors" className="scroll-mt-24 border-t border-slate-200/60 pt-8">
-          <FindTutors 
-            initialFilters={searchFilter}
-            onSelectTutor={handleOpenTutorModal}
-            onBookDemo={handleBookDemoFromModal}
-          />
-        </section>
-
-        {/* SECTION 3: JOIN AS TUTOR */}
-        <section id="join-tutor" className="scroll-mt-24 border-t border-slate-200/60 pt-8 py-12">
-          <JoinAsTutor 
-            onSuccess={handleFormSuccess}
-          />
-        </section>
-
-        {/* SECTION 4: STUDENT / PARENT REGISTRATION */}
+        {/* SECTION 2: FIND A HOME & ONLINE TUTOR (PARENT & STUDENT REGISTRATION) - TOP */}
         <section id="registration" className="scroll-mt-24 border-t border-slate-200/60 pt-8">
           <StudentRegistration 
             presetTutor={selectedTutorForDemo}
@@ -90,8 +73,15 @@ export default function App() {
           />
         </section>
 
+        {/* SECTION 3: JOIN TEJA HOME TUITIONS NETWORK (TUTOR REGISTRATION) - BELOW */}
+        <section id="join-tutor" className="scroll-mt-24 border-t border-slate-200/60 pt-8 py-12">
+          <JoinAsTutor 
+            onSuccess={handleFormSuccess}
+          />
+        </section>
+
         {/* SECTION 5: CONTACT US & FAQS */}
-        <section id="contact" className="scroll-mt-24 border-t border-slate-200/60 pt-8 pb-12">
+        <section id="contact" className="scroll-mt-24 border-t border-slate-200/60 pt-4 pb-6">
           <Contact 
             onSuccess={handleFormSuccess}
           />
@@ -115,7 +105,7 @@ export default function App() {
         </a>
 
         <button
-          onClick={() => scrollToSection('find-tutors')}
+          onClick={() => scrollToSection('registration')}
           className="flex-1 amber-gradient-btn text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow"
         >
           <Search className="w-3.5 h-3.5" /> Find Tutors

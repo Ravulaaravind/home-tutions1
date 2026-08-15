@@ -10,9 +10,8 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'find-tutors', label: 'Find Tutors' },
+    { id: 'registration', label: 'Find Tutor' },
     { id: 'join-tutor', label: 'Join as Tutor' },
-    { id: 'registration', label: 'Registration' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -123,7 +122,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <button
-              onClick={() => handleNavClick('find-tutors')}
+              onClick={() => handleNavClick('registration')}
               className="amber-gradient-btn text-white px-4 py-2 rounded-xl text-sm font-bold shadow-md flex items-center gap-2"
             >
               <Search className="w-4 h-4" />
@@ -142,7 +141,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
           {/* Mobile Menu Trigger */}
           <div className="flex lg:hidden items-center gap-2">
             <button
-              onClick={() => handleNavClick('find-tutors')}
+              onClick={() => handleNavClick('registration')}
               className="amber-gradient-btn text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm"
             >
               Find Tutor
