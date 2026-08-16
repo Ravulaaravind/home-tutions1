@@ -34,7 +34,7 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
         <div className="absolute inset-0 z-0">
           <img
             src="/hero_banner_fresh.jpg"
-            alt="1-on-1 Home Tuition Background"
+            alt="1-on-1 Home Tuition and Private Tutor in Hyderabad - Teja Home Tuitions"
             className="w-full h-full object-cover object-center"
           />
 
@@ -62,7 +62,7 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.12] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-            Find the Right <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">Tutor</span> for Your Child
+            Find 1-on-1 <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">Home Tutors</span> in Hyderabad
           </h1>
 
           {/* Sub-headline */}

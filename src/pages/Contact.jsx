@@ -64,7 +64,7 @@ export default function Contact({ onSuccess }) {
           </span>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl font-black">Contact Teja Home Tuitions</h1>
+        <h2 className="text-2xl sm:text-3xl font-black">Contact Teja Home Tuitions Hyderabad</h2>
         <p className="text-blue-100 text-xs sm:text-sm max-w-2xl">
           Have questions about home tutor fees, scheduling classes, or tutor onboarding? Reach out to our Hyderabad counseling team!
         </p>

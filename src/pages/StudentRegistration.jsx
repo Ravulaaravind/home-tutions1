@@ -93,7 +93,7 @@ https://wa.me/916302664394`;
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-black">Find a Home & Online Tutor</h1>
+        <h2 className="text-3xl sm:text-4xl font-black">Book a 1-on-1 Home & Online Tutor in Hyderabad</h2>
         <p className="text-blue-100 text-sm max-w-2xl">
           Fill out the registration form below to get background-checked 1-on-1 home or online tutors in Hyderabad tailored to your child's exact subject, class, and location requirements.
         </p>

@@ -257,7 +257,7 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-black">Join Teja Home Tuitions Network</h1>
+        <h2 className="text-3xl sm:text-4xl font-black">Join Teja Home Tuitions Network — Apply as a Home Tutor</h2>
         <p className="text-blue-100 text-sm max-w-2xl">
           Are you a passionate teacher or skilled professional in Hyderabad? Join 500+ verified home and online tutors and get student leads matching your preferred location and timing.
         </p>
