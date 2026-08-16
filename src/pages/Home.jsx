@@ -93,7 +93,7 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
             </button>
 
             <a
-              href="https://wa.me/916304248840?text=Hi%20Teja%20Home%20Tuitions,%20I%20need%20a%20home%20tutor%20in%20Hyderabad."
+              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions,%20I%20need%20a%20home%20tutor%20in%20Hyderabad."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-4 py-2.5 sm:px-7 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl flex items-center gap-1.5 sm:gap-2.5 transition-all text-xs sm:text-base border border-emerald-400/40 hover:scale-105"
@@ -158,13 +158,13 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <a
-                href="tel:+916304248840"
+                href="tel:+916302664394"
                 className="bg-white text-blue-900 hover:bg-slate-100 px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg flex items-center gap-2 transition-colors"
               >
-                <PhoneCall className="w-4 h-4 text-blue-600" /> Call +91 6304248840
+                <PhoneCall className="w-4 h-4 text-blue-600" /> Call +91 6302664394
               </a>
               <a
-                href="https://wa.me/916304248840?text=Hi%20Teja%20Home%20Tuitions,%20I%20want%20to%20request%20a%20home%20tutor."
+                href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions,%20I%20want%20to%20request%20a%20home%20tutor."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg flex items-center gap-2 transition-colors"

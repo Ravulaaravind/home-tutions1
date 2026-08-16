@@ -12,7 +12,7 @@ export default function FloatingWhatsApp() {
         ? message 
         : "Hello! I am looking for a 1-on-1 home tutor in Hyderabad. Please assist me."
     );
-    window.open(`https://wa.me/916304248840?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/916302664394?text=${encodedText}`, '_blank');
     setIsOpen(false);
     setMessage('');
   };

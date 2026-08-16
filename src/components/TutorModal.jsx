@@ -177,7 +177,7 @@ export default function TutorModal({ tutor, onClose, onBookDemo }) {
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <a
-              href={`https://wa.me/916304248840?text=Hi,%20I%20want%20to%20start%20classes%20with%20tutor%20${encodeURIComponent(tutor.name)}`}
+              href={`https://wa.me/916302664394?text=Hi,%20I%20want%20to%20start%20classes%20with%20tutor%20${encodeURIComponent(tutor.name)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-colors shadow"

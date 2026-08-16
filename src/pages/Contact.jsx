@@ -30,7 +30,7 @@ export default function Contact({ onSuccess }) {
 • User Type: ${formData.userType}
 • Message: ${formData.message}`;
 
-    window.open(`https://wa.me/916304248840?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/916302664394?text=${encodeURIComponent(waText)}`, '_blank');
     setIsSubmitting(false);
 
     // Automatic form refresh / reset to clean state
@@ -45,7 +45,7 @@ export default function Contact({ onSuccess }) {
     if (onSuccess) {
       onSuccess({
         title: 'Message Sent via WhatsApp!',
-        message: `Thank you ${formData.name}! Your inquiry has been sent to our helpline (+91 6304248840).`
+        message: `Thank you ${formData.name}! Your inquiry has been sent to our helpline (+91 6302664394).`
       });
     }
   };
@@ -60,7 +60,7 @@ export default function Contact({ onSuccess }) {
             Contact Support
           </span>
           <span className="bg-emerald-500/30 text-emerald-200 text-xs px-3 py-1 rounded-full border border-emerald-400/40">
-            Helpline: +91 6304248840
+            Helpline: +91 6302664394
           </span>
         </div>
 
@@ -87,7 +87,7 @@ export default function Contact({ onSuccess }) {
                 <div>
                   <h4 className="font-bold text-slate-900">Hyderabad Office Address</h4>
                   <p className="text-slate-600 text-xs mt-0.5 leading-relaxed">
-                    Near Habsiguda Metro Station, Uppal Road, Habsiguda, Hyderabad, TS - 500007
+                    Abids, Hyderabad, TS - 500001
                   </p>
                 </div>
               </div>
@@ -98,8 +98,8 @@ export default function Contact({ onSuccess }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">Helpline Phone Numbers</h4>
-                  <a href="tel:+916304248840" className="text-blue-700 font-bold hover:underline block text-xs mt-0.5">
-                    +91 6304248840
+                  <a href="tel:+916302664394" className="text-blue-700 font-bold hover:underline block text-xs mt-0.5">
+                    +91 6302664394
                   </a>
                 </div>
               </div>
@@ -111,12 +111,12 @@ export default function Contact({ onSuccess }) {
                 <div>
                   <h4 className="font-bold text-slate-900">WhatsApp Support</h4>
                   <a 
-                    href="https://wa.me/916304248840?text=Hi%20Teja%20Home%20Tuitions"
+                    href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-emerald-700 font-bold hover:underline block text-xs mt-0.5"
                   >
-                    +91 6304248840 (Click to Chat)
+                    +91 6302664394 (Click to Chat)
                   </a>
                 </div>
               </div>
@@ -127,8 +127,8 @@ export default function Contact({ onSuccess }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">Email Address</h4>
-                  <a href="mailto:contact@tejahometuitions.com" className="text-slate-600 hover:text-blue-700 text-xs mt-0.5 block">
-                    contact@tejahometuitions.com
+                  <a href="mailto:tejahometuitionshyd01@gmail.com" className="text-slate-600 hover:text-blue-700 text-xs mt-0.5 block font-medium">
+                    tejahometuitionshyd01@gmail.com
                   </a>
                 </div>
               </div>

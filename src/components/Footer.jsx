@@ -136,19 +136,19 @@ export default function Footer({ setActiveTab }) {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 mt-1 flex-shrink-0" />
-                <span>Near Habsiguda Metro Station, Uppal Road, Habsiguda, Hyderabad, TS - 500007</span>
+                <span>Abids, Hyderabad, TS - 500001</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <a href="tel:+916304248840" className="hover:text-white transition-colors">+91 6304248840</a>
+                <a href="tel:+916302664394" className="hover:text-white transition-colors">+91 6302664394</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <a href="https://wa.me/916304248840" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 transition-colors">+91 6304248840 (WhatsApp)</a>
+                <a href="https://wa.me/916302664394" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 transition-colors">+91 6302664394 (WhatsApp)</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                <a href="mailto:contact@tejahometuitions.com" className="hover:text-white transition-colors">contact@tejahometuitions.com</a>
+                <a href="mailto:tejahometuitionshyd01@gmail.com" className="hover:text-white transition-colors">tejahometuitionshyd01@gmail.com</a>
               </div>
             </div>
           </div>

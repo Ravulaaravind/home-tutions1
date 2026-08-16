@@ -172,7 +172,7 @@ export const TUTORS_DATA = [
     subjects: ["Physics", "Science", "Mathematics"],
     classes: ["Class 8", "Class 9", "Class 10"],
     boards: ["CBSE", "State Board"],
-    areas: ["Uppal", "Habsiguda", "Tarnaka", "Ramanthapur"],
+    areas: ["Uppal", "Abids", "Tarnaka", "Ramanthapur"],
     mode: "Both",
     image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400",
     hourlyRate: "₹450 - ₹650/hr",
@@ -193,7 +193,7 @@ export const HYDERABAD_LOCATIONS = [
   "Koti", "Abids", "Mehdipatnam", "Tolichowki", "Attapur",
   "Manikonda", "Puppalguda", "Financial District", "Tellapur", "Kokapet",
   "Narsingi", "Sun City", "Rajendra Nagar", "LB Nagar", "Dilsukhnagar",
-  "Kothapet", "Nagole", "Hayathnagar", "Uppal", "Habsiguda",
+  "Kothapet", "Nagole", "Hayathnagar", "Uppal",
   "Tarnaka", "Moulali", "ECIL", "Sainikpuri", "AS Rao Nagar",
   "Malkajgiri", "Secunderabad", "Bowenpally", "Alwal", "Kompally"
 ];

@@ -16,7 +16,7 @@ export default function StudentRegistration({ presetTutor, onSuccess }) {
     subjectRequired: 'Mathematics',
     location: '',
     tuitionFee: '',
-    tuitionMode: '1-on-1 Home Tuition',
+    tuitionMode: 'Online Tuition',
     preferredGender: 'Any Gender',
     preferredDaysTime: '',
     additionalNotes: presetTutor ? `Requesting tutor: ${presetTutor.name} (${presetTutor.subjects?.join(', ')})` : ''
@@ -50,9 +50,9 @@ export default function StudentRegistration({ presetTutor, onSuccess }) {
 *Additional Notes:* ${formData.additionalNotes ? formData.additionalNotes : 'N/A'}
 
 *📢 Official Teja Home Tuitions WhatsApp Helpline:*
-https://wa.me/916304248840`;
+https://wa.me/916302664394`;
 
-    window.open(`https://wa.me/916304248840?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/916302664394?text=${encodeURIComponent(waText)}`, '_blank');
     setIsSubmitting(false);
 
     // Automatic form refresh / reset to clean state
@@ -65,7 +65,7 @@ https://wa.me/916304248840`;
       board: 'CBSE',
       subjectRequired: 'Mathematics',
       location: '',
-      tuitionMode: '1-on-1 Home Tuition',
+      tuitionMode: 'Online Tuition',
       preferredGender: 'Any Gender',
       preferredDaysTime: '',
       additionalNotes: ''
@@ -74,7 +74,7 @@ https://wa.me/916304248840`;
     if (onSuccess) {
       onSuccess({
         title: 'Tuition Registration Sent via WhatsApp!',
-        message: `Thank you ${formData.parentName}! Your request for ${formData.studentName} (${formData.studentClass} ${formData.board}) has been sent to our WhatsApp helpline (+91 6304248840).`
+        message: `Thank you ${formData.parentName}! Your request for ${formData.studentName} (${formData.studentClass} ${formData.board}) has been sent to our WhatsApp helpline (+91 6302664394).`
       });
     }
   };
@@ -255,9 +255,8 @@ https://wa.me/916304248840`;
                 onChange={(e) => setFormData({ ...formData, tuitionMode: e.target.value })}
                 className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-sm font-semibold focus:ring-2 focus:ring-blue-600 focus:outline-none"
               >
-                <option value="1-on-1 Home Tuition">1-on-1 Home Tuition</option>
                 <option value="Online Tuition">Online Tuition</option>
-                <option value="Both Home & Online">Both Home & Online</option>
+                <option value="Home Offline Tuition">Home Offline Tuition</option>
               </select>
             </div>
 
@@ -283,7 +282,7 @@ https://wa.me/916304248840`;
               📍 Major Hyderabad Service Zones (Reference Area List):
             </span>
             <p className="text-xs text-slate-600 leading-relaxed font-medium">
-              Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Habsiguda • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
+              Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
             </p>
           </div>
 

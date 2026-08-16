@@ -106,7 +106,7 @@ export default function App() {
           <HowItWorks setActiveTab={scrollToSection} />
         </section>
 
-        {/* SECTION 7: LOCATION MAP - HABSIGUDA METRO STATION - BELOW 3 SIMPLE STEPS */}
+        {/* SECTION 7: LOCATION MAP - ABIDS, HYDERABAD - BELOW 3 SIMPLE STEPS */}
         <section id="location" className="scroll-mt-24 border-t border-slate-200/60 pt-6 pb-8">
           <LocationMap />
         </section>
@@ -122,7 +122,7 @@ export default function App() {
       {/* Sticky Mobile Quick Action Footer Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-4 flex items-center justify-around gap-2 shadow-2xl">
         <a
-          href="tel:+916304248840"
+          href="tel:+916302664394"
           className="flex-1 bg-slate-900 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow"
         >
           <PhoneCall className="w-3.5 h-3.5 text-amber-400" /> Call Helpline

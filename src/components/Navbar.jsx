@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   GraduationCap, Phone, MessageSquare, Menu, X, 
-  Search, UserCheck, UserPlus, MapPin, Sparkles
+  Search, UserCheck, UserPlus, MapPin, Sparkles, Mail
 } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab }) {
@@ -59,14 +59,21 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
           <div className="flex items-center gap-4 text-xs">
             <a 
-              href="tel:+916304248840" 
+              href="mailto:tejahometuitionshyd01@gmail.com" 
+              className="hidden lg:flex items-center gap-1 hover:text-amber-300 transition-colors font-medium text-[11px]"
+            >
+              <Mail className="w-3.5 h-3.5 text-amber-400" />
+              <span>tejahometuitionshyd01@gmail.com</span>
+            </a>
+            <a 
+              href="tel:+916302664394" 
               className="flex items-center gap-1 hover:text-amber-300 transition-colors font-medium"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>+91 6304248840</span>
+              <span>+91 6302664394</span>
             </a>
             <a 
-              href="https://wa.me/916304248840?text=Hi%20Teja%20Home%20Tuitions,%20I%20am%20looking%20for%20a%20home%20tutor%20in%20Hyderabad."
+              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions,%20I%20am%20looking%20for%20a%20home%20tutor%20in%20Hyderabad."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-0.5 rounded-full font-medium transition-colors"

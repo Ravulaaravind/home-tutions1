@@ -14,7 +14,7 @@ export default function JoinAsTutor({ onSuccess }) {
     email: '',
     qualification: 'B.Tech / M.Tech',
     experienceYears: '3',
-    tuitionMode: 'Both Home & Online',
+    tuitionMode: 'Online Tuition',
     docType: 'Aadhaar Card',
     gender: 'Male',
     bio: ''
@@ -214,7 +214,7 @@ export default function JoinAsTutor({ onSuccess }) {
 *📢 Official Tutor WhatsApp Group:*
 https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
 
-    window.open(`https://wa.me/916304248840?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/916302664394?text=${encodeURIComponent(waText)}`, '_blank');
     setIsSubmitting(false);
 
     // Automatic form refresh / reset to clean state
@@ -226,7 +226,7 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
       email: '',
       qualification: 'B.Tech / B.E.',
       experienceYears: '3',
-      tuitionMode: '1-on-1 Home Tuition',
+      tuitionMode: 'Online Tuition',
       expectedFee: 'Monthly Salary',
       bio: ''
     });
@@ -238,7 +238,7 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
     if (onSuccess) {
       onSuccess({
         title: 'Tutor Application Sent via WhatsApp!',
-        message: `Thank you ${formData.fullName}! Your application has been sent to our tutor onboarding team (+91 6304248840).`
+        message: `Thank you ${formData.fullName}! Your application has been sent to our tutor onboarding team (+91 6302664394).`
       });
     }
   };
@@ -404,9 +404,8 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
                 onChange={(e) => setFormData({...formData, tuitionMode: e.target.value})}
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
               >
-                <option value="Both">Home Tuition & Online</option>
-                <option value="Home Tuition">Home Tuition Only</option>
-                <option value="Online">Online Classes Only</option>
+                <option value="Online Tuition">Online Tuition</option>
+                <option value="Home Offline Tuition">Home Offline Tuition</option>
               </select>
             </div>
 
@@ -529,7 +528,7 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
                 📍 Major Hyderabad Service Zones (Reference List):
               </span>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Habsiguda • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
+                Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
               </p>
             </div>
           </div>
