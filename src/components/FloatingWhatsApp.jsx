@@ -34,9 +34,9 @@ export default function FloatingWhatsApp() {
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-emerald-700 rounded-full"></span>
               </div>
               <div>
-                <h4 className="font-bold text-sm leading-tight">Teja Home Tuitions</h4>
+                <h4 className="font-bold text-sm leading-tight">Teja Home Tuition</h4>
                 <span className="text-[11px] text-emerald-200 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-amber-300" /> Online • Quick Match
+                  <Sparkles className="w-3 h-3 text-amber-300" /> Chat With Us • Get quick assistance
                 </span>
               </div>
             </div>
@@ -53,8 +53,8 @@ export default function FloatingWhatsApp() {
           <div className="p-4 bg-emerald-50/50 space-y-3 text-xs leading-relaxed">
             <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 text-slate-700 space-y-1 max-w-[90%]">
               <p className="font-semibold text-emerald-800 text-xs">Namaste! 👋</p>
-              <p>Welcome to Teja Home Tuitions Hyderabad!</p>
-              <p>Need a qualified 1-on-1 home or online tutor for your child? Message us directly on WhatsApp!</p>
+              <p>Welcome to Teja Home Tuition Hyderabad!</p>
+              <p>Need a qualified 1-on-1 home or online tutor for your child? Connect with us for quick assistance.</p>
               <div className="text-[10px] text-slate-400 text-right pt-1">Just now</div>
             </div>
 
@@ -92,7 +92,7 @@ export default function FloatingWhatsApp() {
             <button 
               type="submit"
               className="bg-emerald-600 hover:bg-emerald-700 text-white p-2 rounded-xl transition-colors shadow"
-              title="Send to WhatsApp"
+              title="Send message"
             >
               <Send className="w-4 h-4" />
             </button>
@@ -105,7 +105,7 @@ export default function FloatingWhatsApp() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="group flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-white/70 relative"
-        aria-label="Contact us on WhatsApp"
+        aria-label="Chat With Us on WhatsApp"
       >
         <div className="relative flex items-center justify-center">
           <svg className="w-7 h-7 fill-white flex-shrink-0" viewBox="0 0 24 24">
@@ -113,7 +113,10 @@ export default function FloatingWhatsApp() {
           </svg>
           <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-yellow-400 border-2 border-emerald-700 rounded-full animate-pulse shadow-sm"></span>
         </div>
-        <span className="hidden md:inline font-extrabold text-sm pr-1">Need a Tutor?</span>
+        <div className="hidden md:flex flex-col text-left pr-1">
+          <span className="font-extrabold text-sm leading-none">Chat With Us</span>
+          <span className="text-[10px] text-emerald-100 font-normal leading-none mt-0.5">Get quick assistance</span>
+        </div>
       </button>
 
     </div>

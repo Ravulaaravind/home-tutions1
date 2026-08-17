@@ -51,7 +51,7 @@ export default function Footer({ setActiveTab }) {
                 <GraduationCap className="w-6 h-6 text-amber-400" />
               </div>
               <div>
-                <span className="text-xl font-black text-white tracking-tight">Teja Home Tuitions</span>
+                <span className="text-xl font-black text-white tracking-tight">Teja Home Tuition</span>
                 <span className="block text-[11px] text-amber-400 font-bold uppercase tracking-wider">Hyderabad's Trusted Tutor Network</span>
               </div>
             </div>

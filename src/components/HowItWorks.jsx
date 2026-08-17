@@ -12,7 +12,7 @@ export default function HowItWorks({ setActiveTab }) {
           </span>
           <h2 className="text-3xl sm:text-4xl font-black">How It Works</h2>
           <p className="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
-            Getting the perfect home tutor for your child takes less than 2 minutes.
+            Find the right home tutor for your child in under 2 minutes.
           </p>
         </div>
 
@@ -21,33 +21,33 @@ export default function HowItWorks({ setActiveTab }) {
           {/* Step 1 */}
           <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-4 text-center relative hover:border-amber-400/50 transition-all">
             <div className="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 font-black text-2xl flex items-center justify-center mx-auto shadow-lg">
-              1
+              01
             </div>
-            <h3 className="text-xl font-bold">Submit Requirement</h3>
+            <h3 className="text-xl font-bold">Tell Us What You Need</h3>
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Fill out our quick registration form with student class, subject, board, and location in Hyderabad.
+              Share your child's class, subject, board, preferred location, and learning requirements.
             </p>
           </div>
 
           {/* Step 2 */}
           <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-4 text-center relative hover:border-amber-400/50 transition-all">
             <div className="w-14 h-14 rounded-2xl bg-blue-500 text-white font-black text-2xl flex items-center justify-center mx-auto shadow-lg">
-              2
+              02
             </div>
-            <h3 className="text-xl font-bold">Match Tutor & Schedule</h3>
+            <h3 className="text-xl font-bold">Get Matched With a Tutor</h3>
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              We assign the top-rated tutor in your area and arrange 1-to-1 tuition classes at your home or online.
+              We help you find a suitable tutor based on your child's academic needs, location, and preferred schedule.
             </p>
           </div>
 
           {/* Step 3 */}
           <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-4 text-center relative hover:border-amber-400/50 transition-all">
             <div className="w-14 h-14 rounded-2xl bg-emerald-500 text-white font-black text-2xl flex items-center justify-center mx-auto shadow-lg">
-              3
+              03
             </div>
-            <h3 className="text-xl font-bold">Start Regular Classes</h3>
+            <h3 className="text-xl font-bold">Start Learning</h3>
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Finalize class timings and start regular tuition with weekly tracking reports.
+              Begin personalized one-to-one sessions at home or online and track your child's learning progress.
             </p>
           </div>
 

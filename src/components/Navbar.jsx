@@ -48,12 +48,12 @@ export default function Navbar({ activeTab, setActiveTab }) {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-amber-400" />
-              <span>Hyderabad • 1-to-1 Home & Online Tuitions</span>
+              <span>Hyderabad • Verified 1-to-1 Home & Online Tutoring</span>
             </span>
             <span className="hidden md:inline text-blue-200">|</span>
             <span className="hidden md:inline-flex items-center gap-1 text-blue-100">
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              Home Tuitions Available
+              Personalized Learning Options
             </span>
           </div>
 
@@ -68,18 +68,19 @@ export default function Navbar({ activeTab, setActiveTab }) {
             <a 
               href="tel:+916302664394" 
               className="flex items-center gap-1 hover:text-amber-300 transition-colors font-medium"
+              title="Talk to an Advisor"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>+91 6302664394</span>
+              <span>Talk to an Advisor: +91 6302664394</span>
             </a>
             <a 
-              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions,%20I%20am%20looking%20for%20a%20home%20tutor%20in%20Hyderabad."
+              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuition,%20I%20want%20to%20find%20a%20tutor%20for%20my%20child."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-0.5 rounded-full font-medium transition-colors"
+              className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-0.5 rounded-full font-medium transition-colors"
             >
               <MessageSquare className="w-3 h-3" />
-              <span>WhatsApp</span>
+              <span>Chat With Us</span>
             </a>
           </div>
         </div>
@@ -99,10 +100,10 @@ export default function Navbar({ activeTab, setActiveTab }) {
             </div>
             <div>
               <span className="block text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-900 bg-clip-text text-transparent">
-                Teja Home Tuitions
+                Teja Home Tuition
               </span>
               <span className="block text-[10px] uppercase font-bold tracking-widest text-indigo-600 -mt-1">
-                Hyderabad's #1 Tutor Network
+                Hyderabad's Trusted Tutor Network
               </span>
             </div>
           </button>

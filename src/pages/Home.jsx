@@ -62,23 +62,23 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.12] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-            Find 1-on-1 <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">Home Tutors</span> in Hyderabad
+            Find a Tutor Who Fits <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">Your Child's Learning Needs</span>
           </h1>
 
           {/* Sub-headline */}
           <p className="text-lg sm:text-2xl text-blue-50 max-w-2xl leading-relaxed font-semibold drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
-            Verified 1-to-1 Home & Online Tuitions in Hyderabad. Boost marks, master difficult subjects, and build lifelong academic confidence.
+            Connect with verified home and online tutors in Hyderabad for personalized, one-to-one learning. Build stronger concepts, improve academic performance, and learn with confidence.
           </p>
 
           {/* Feature Bullets */}
           <div className="grid grid-cols-2 gap-3 pt-2 text-xs sm:text-sm font-bold text-white max-w-lg">
             <div className="flex items-center gap-2 bg-slate-950/80 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-lg">
               <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
-              <span>1-to-1 Home Tuition</span>
+              <span>Personalized 1-to-1 Attention</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-950/80 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-lg">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <span>Background Verified</span>
+              <span>Verified & Screened Tutors</span>
             </div>
           </div>
 
@@ -88,18 +88,18 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
               onClick={() => setActiveTab('registration')}
               className="amber-gradient-btn text-white px-8 py-4 rounded-2xl font-black text-base shadow-2xl flex items-center gap-2 group"
             >
-              <span>Find a Tutor</span>
+              <span>Find the Right Tutor</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <a
-              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuitions,%20I%20need%20a%20home%20tutor%20in%20Hyderabad."
+              href="https://wa.me/916302664394?text=Hi%20Teja%20Home%20Tuition,%20I%20want%20to%20find%20a%20tutor%20for%20my%20child."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-4 py-2.5 sm:px-7 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl flex items-center gap-1.5 sm:gap-2.5 transition-all text-xs sm:text-base border border-emerald-400/40 hover:scale-105"
             >
               <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 fill-white text-white flex-shrink-0" />
-              <span>Need a Tutor? WhatsApp Us</span>
+              <span>Talk to Us on WhatsApp</span>
             </a>
 
             <button
@@ -126,11 +126,11 @@ export default function Home({ setActiveTab, onSelectTutor, setSearchFilter }) {
             </div>
             <div className="flex items-center justify-center gap-2 border-l border-white/15">
               <ShieldCheck className="w-5 h-5 text-emerald-400" />
-              <span><strong className="text-white text-sm block">Aadhaar & Degree</strong> Checked Tutors</span>
+              <span><strong className="text-white text-sm block">Verified & Screened</strong> Tutors</span>
             </div>
             <div className="flex items-center justify-center gap-2 border-l border-white/15">
               <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-              <span><strong className="text-white text-sm block">4.9 / 5 Star</strong> Parent Rating</span>
+              <span><strong className="text-white text-sm block">Focused on Better</strong> Learning Outcomes</span>
             </div>
           </div>
         </div>

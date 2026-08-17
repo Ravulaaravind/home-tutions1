@@ -10,10 +10,10 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900">
-            Why Parents Trust Teja Home Tuitions
+            Why Parents Choose Teja Home Tuition
           </h2>
           <p className="text-slate-800 font-bold max-w-2xl mx-auto text-sm sm:text-base">
-            We bridge the gap between dedicated academic mentors and students needing personal attention across Hyderabad.
+            Personalized learning, trusted tutors, and convenient one-to-one support for students across Hyderabad.
           </p>
         </div>
 
@@ -23,9 +23,9 @@ export default function WhyChooseUs() {
             <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
               <UserCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">1-to-1 Personal Attention</h3>
+            <h3 className="text-lg font-bold text-slate-900">01 — Personalized 1-to-1 Attention</h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Unlike crowded coaching institutes, our home tutors focus 100% on your child's specific strengths, weaknesses, and learning pace.
+              Every student learns differently. Our tutors adapt their teaching approach to the child's learning pace, strengths, and areas that need improvement.
             </p>
           </div>
 
@@ -33,9 +33,9 @@ export default function WhyChooseUs() {
             <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Background Checked Tutors</h3>
+            <h3 className="text-lg font-bold text-slate-900">02 — Verified & Screened Tutors</h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Every educator passes multi-step screening including Aadhaar check, degree verification, and teaching evaluation.
+              We carefully review tutor profiles and verify relevant qualifications and information before connecting them with students.
             </p>
           </div>
 
@@ -43,9 +43,9 @@ export default function WhyChooseUs() {
             <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
               <Clock className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Flexible Timings & Home Comfort</h3>
+            <h3 className="text-lg font-bold text-slate-900">03 — Flexible Learning Options</h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Save travel time! Schedule classes at your preferred timings directly at your home or convenient online interactive sessions.
+              Choose convenient home tuition or online classes based on your schedule and learning preferences.
             </p>
           </div>
 
@@ -53,9 +53,9 @@ export default function WhyChooseUs() {
             <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
               <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Transparent & Affordable</h3>
+            <h3 className="text-lg font-bold text-slate-900">04 — Focused on Better Learning</h3>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              No hidden registration fees. Pay affordable monthly fees with guaranteed replacement if you ever want a different tutor.
+              Strengthen concepts, solve doubts, improve subject confidence, and work toward better academic performance.
             </p>
           </div>
 
