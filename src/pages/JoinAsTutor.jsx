@@ -522,15 +522,6 @@ https://chat.whatsapp.com/LJ9vFZ5b91YJV6rEWt1ZCu`;
               Enter the Hyderabad areas or localities where you are available to travel for 1-on-1 home tuitions.
             </p>
 
-            {/* Major Hyderabad Service Zones Reference Text Box */}
-            <div className="bg-slate-50/90 rounded-2xl p-4 border border-slate-200 space-y-2 mt-3">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
-                📍 Major Hyderabad Service Zones (Reference List):
-              </span>
-              <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Madhapur • Gachibowli • Kondapur • Jubilee Hills • Banjara Hills • Kukatpally • KPHB Colony • Miyapur • Nizampet • Bachupally • Pragathi Nagar • Hafeezpet • Chanda Nagar • Begumpet • Ameerpet • SR Nagar • Panjagutta • Himayatnagar • Narayanguda • Nallakunta • Koti • Abids • Mehdipatnam • Tolichowki • Attapur • Manikonda • Puppalguda • Financial District • Tellapur • Kokapet • Narsingi • Sun City • Rajendra Nagar • LB Nagar • Dilsukhnagar • Kothapet • Nagole • Hayathnagar • Uppal • Tarnaka • Moulali • ECIL • Sainikpuri • AS Rao Nagar • Malkajgiri • Secunderabad • Bowenpally • Alwal • Kompally
-              </p>
-            </div>
           </div>
         </div>
 
